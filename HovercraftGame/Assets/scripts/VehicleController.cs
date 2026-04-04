@@ -27,5 +27,6 @@ public class VehicleController : MonoBehaviour
     {
         var movement = action.Get<Vector2>();
         desired_acceleration = movement.y;
+        // add the horizontal input in z direction
     }
 }
