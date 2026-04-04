@@ -4,9 +4,9 @@ using UnityEngine.InputSystem;
 public class VehicleController : MonoBehaviour
 {
 
-    public float desired_acceleration_x = 0f;
+    public float desired_acceleration_x = 0.0f;
     
-    public float desired_acceleration_z = 0f;
+    public float desired_acceleration_z = 0.0f;
 
 
     public float impulse;
