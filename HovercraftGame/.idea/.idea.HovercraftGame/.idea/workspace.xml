@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b204c4a-d871-41aa-bfa2-33b6e157791b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HovercraftGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HovercraftGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/scripts/VehicleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/VehicleController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1775261638550</updated>
       <workItem from="1775280444052" duration="2195000" />
-      <workItem from="1775328529282" duration="10069000" />
+      <workItem from="1775328529282" duration="11729000" />
     </task>
     <servers />
   </component>

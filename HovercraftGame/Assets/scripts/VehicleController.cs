@@ -1,9 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class VehicleController : MonoBehaviour
 {
 
+    public TextMeshProUGUI timelbl; // drag your text UI element here in Inspector
+    private float starttime;
+    
     public float desired_acceleration_x = 0.0f;
     
     public float desired_acceleration_z = 0.0f;
@@ -27,8 +31,9 @@ public class VehicleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _rb.AddRelativeForce(desired_acceleration_x*impulse, 0, desired_acceleration_z*impulse);
         
+        _rb.AddRelativeForce(desired_acceleration_x*impulse, 0, desired_acceleration_z*impulse);
+        timelbl.text = string.Format("Current time: {0:F2} seconds", (Time.time - starttime));
         float dx = (Mouse.current.position.x.value - Screen.width / 2) / turnrate;
         if (Mathf.Abs(dx) > 0.01f)
         {
