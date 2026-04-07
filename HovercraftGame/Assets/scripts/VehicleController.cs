@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
@@ -7,6 +8,8 @@ public class VehicleController : MonoBehaviour
 
     public TextMeshProUGUI timelbl; // drag your text UI element here in Inspector
     private float starttime;
+    public int _lapCounter;
+    public int checkpointcounter = 0;
     
     public float desired_acceleration_x = 0.0f;
     
@@ -18,7 +21,7 @@ public class VehicleController : MonoBehaviour
     public float turnrate;
 
     public CheckpointController target;
-
+    
     public Rigidbody _rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,14 +36,14 @@ public class VehicleController : MonoBehaviour
     {
         
         _rb.AddRelativeForce(desired_acceleration_x*impulse, 0, desired_acceleration_z*impulse);
-        timelbl.text = string.Format("Current time: {0:F2} seconds", (Time.time - starttime));
+        
+        timelbl.text = string.Format("Current time: {0:F2} seconds\nLap #{1}", (Time.time - starttime),_lapCounter);
+        
         float dx = (Mouse.current.position.x.value - Screen.width / 2) / turnrate;
         if (Mathf.Abs(dx) > 0.01f)
         {
             transform.Rotate(0, dx, 0);
         }
-        
-        
     }
     
     void OnMove(InputValue action)

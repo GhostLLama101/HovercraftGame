@@ -7,6 +7,8 @@ public class CheckpointController : MonoBehaviour
     public CheckpointController next;
     public MeshRenderer left;
     public MeshRenderer right;
+
+    public float checkpoint;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,6 +30,7 @@ public class CheckpointController : MonoBehaviour
             next.right.materials[0].color = Color.red;
             left.materials[0].color = Color.white;
             right.materials[0].color = Color.white;
+            vehicle.checkpointcounter++;
         }
     }
 }
